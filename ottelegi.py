@@ -7,7 +7,7 @@ import time
 
 class MySpider(scrapy.Spider):
     name = 'myspider'
-    start_urls = ['https://www.divan.ru/category/potolocnye-svetilniki']
+    start_urls = ['https://www.divan.ru/product/svetilnik-potolochnyj-matthew']
 
     def __init__(self, *args, **kwargs):
         super(MySpider, self).__init__(*args, **kwargs)
@@ -30,11 +30,6 @@ class MySpider(scrapy.Spider):
             'price': price,
             'url': href
         }
-
-        print(name)
-        print(price)
-        print(href)
-
 
         # Закрываем драйвер после завершения
         self.driver.quit()
